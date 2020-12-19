@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors.</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <!--<h1>
+                <span>Rock</span>
+                <span>Paper</span>
+                <span>Scissors</span>
+            </h1>
+            <div class="score-container">
+                <h4>Score</h4>
+                <p id ="score">0</p>
+            </div>-->
+
+
+            <h1>
+                <span>Rock</span>
+                <span>Paper</span>
+                <span>Scissors</span>
+            </h1>
+            <div class="score-container">
+                <div class = "user-score">
+                    <h4>User</h4>
+                    <p id ="player-score">0</p>
+                </div>
+                <div class = "comp-score">
+                    <h4>Comp</h4>
+                    <p id ="computer-score">0</p>
+                </div>
+
+            </div>
+
+
+        </header> 
+
+        <main id= "main">
+            <button class = "btn-action btn-paper pick" data-choice = "paper">
+                <span class="wrapper">
+                    <img src="./images/icon-paper.svg" alt="paper">
+                </span>
+            </button>
+            <button class = "btn-action btn-scissors pick" data-choice = "scissors">
+                <span class="wrapper">
+                    <img src="./images/icon-scissors.svg" alt="scissors">
+                </span>
+            </button>
+            <button class = "btn-action btn-rock pick" data-choice = "rock">
+                <span class="wrapper">
+                    <img src="./images/icon-rock.svg" alt="rock">
+                </span>
+            </button>
+        </main>
+        
+        <div class="rules-modal" id = "rules-modal">
+            
+            <img src="./images/image-rules.svg" alt="rules">
+            <button><img src="./images/icon-close.svg" alt="close" id = "close-rules"></button>
+
+        </div>
+        <button class = "btn-rules" id = "open-rules">Rules</button>
+    </div>
+    
+    <div class =  "selection" id = "selection">
+        <div>
+            <h2>You picked</h2>
+            <button class = "btn-action btn-paper" id = "user-selection">
+                <span class="wrapper">
+                    <img src="./images/icon-paper.svg" alt="paper">
+                </span>
+            </button>
+        </div>
+        <div class = "for-mobile">
+            <p class="game-over-text" id = "wintxt">
+            You win
+            </p>
+
+            <button class = "btn-replay" id = "replay">Play again</button>
+        </div>
+        <div>
+            <h2>The computer picked</h2>
+            <button class = "btn-action btn-rock" id = "computer-selection"> 
+            <span class="wrapper">
+                <img src="./images/icon-rock.svg" alt="rock">
+            </span>
+            </button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+<script src="script.js"></script>

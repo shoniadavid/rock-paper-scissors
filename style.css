@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    color:white;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 10%, hsl(214, 47%,23%), hsl(237, 49%, 15%) );
+    background-size: cover;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+
+}
+
+.container{
+    margin: 0px auto;
+    width: 700px;
+    max-width: 100%;
+
+}
+
+
+header{
+    border: 3px solid hsl(217, 16%, 45%);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    margin:50px 0;
+}
+
+header  h1{
+    margin:0;
+    font-size: 3rem;
+    line-height: 0.8;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+header  .player-score-container{
+    background-color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.player-score-container h4 {
+    color: hsl(229, 64%, 46%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.player-score-container p {
+    color: hsl(229, 25%, 31%);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+header  .computer-score-container{
+    background-color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.computer-score-container h4 {
+    color: hsl(349, 71%, 52%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.computer-score-container p {
+    color: hsl(229, 25%, 31%);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+
+.score-container{
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-container p {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.user-score{
+    background-color:hsl(230, 89%, 62%);
+    width:80px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+}
+
+.comp-score{
+    background-color: hsl(349, 71%, 52%);
+    width:80px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    text-transform: uppercase;
+
+}
+
+.user-score h4{
+    margin-top: 10px;
+}
+
+.comp-score h4{
+    margin-top: 10px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height:350px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+main::before{
+    background-image: url('./images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top:20%;
+    left:15%;
+    height:70%;
+    width: 70%;
+    z-index: -1;
+
+}
+
+
+
+.btn-action{
+    border:none;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    box-shadow: inset 0 -5px rgba(0,0,0, 0.15);
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+
+.btn-action:focus{
+    outline: none;
+}
+
+.btn-action:active{
+    transform: scale(0.9);
+}
+
+.btn-action .wrapper{
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: inset 0 5px rgba(0,0,0, 0.15);
+}
+
+.btn-paper{
+    background: linear-gradient(
+      to bottom,
+    hsl(230, 89%, 62%), hsl(230, 89%, 65%)
+    );
+}
+
+.btn-scissors{
+    background: linear-gradient(
+      to bottom,
+    hsl(39, 89%, 49%) , hsl(40, 84%, 53%)
+    );
+}
+
+.btn-rock{
+    background: linear-gradient(
+      to bottom,
+    hsl(349, 71%, 52%) , hsl(349, 70%, 56%)
+    );
+}
+
+.btn-rules{
+    border: 2px solid white;
+    border-radius:10px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 25px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+
+.btn-replay{
+    border: 2px solid white;
+    border-radius:10px;
+    background-color: white;
+    color: hsl(229, 25%, 31%);
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.selection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    width: 1000px;
+    max-width: 100%;
+    margin:0 auto;
+    text-transform: uppercase;
+    display: none;
+}
+
+
+.game-over-text{
+    margin:0;
+    font-size: 3rem;
+    line-height: 0.8;
+    
+    margin: 0 0 20px;
+}
+
+
+.selection .btn-action{
+    margin:50px 100px;
+    transform: scale(1.4);
+
+}
+
+
+.rules-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    top:0;
+    left:0;
+    position: fixed;
+    background-color: #f0f0f0;
+    display: none;
+    flex-direction: column;
+
+}
+
+.rules-modal button {
+    border:none;
+    background-color: transparent;
+    cursor:pointer;
+    outline:none;
+    margin-top:100px;
+
+}
+
+.rules-modal button:active{
+    transform: scale(0.9);
+}
+
+@media (max-width: 800px){
+    .selection .btn-action{
+        margin: 50px 20px;
+        transform: scale(1);
+    }
+    .for-mobile{
+        order:1;
+    }
+    .selection{
+        width: 500px;
+    }
+}
