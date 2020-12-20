@@ -303,3 +303,82 @@ main::before{
         width: 500px;
     }
 }
+
+
+@media (max-width: 436px){
+    .btn-action .wrapper{
+        width:80px;
+        height: 80px;
+    }
+
+    .btn-action {
+        width:100px;
+        height: 100px;
+    }
+
+    header h1{
+        font-size: 2rem;
+    }
+    header  .player-score-container{
+        background-color: white;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .player-score-container h4 {
+        color: hsl(229, 64%, 46%);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    
+    .player-score-container p {
+        color: hsl(229, 25%, 31%);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    
+    header  .computer-score-container{
+        background-color: white;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .computer-score-container h4 {
+        color: hsl(349, 71%, 52%);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    
+    .computer-score-container p {
+        color: hsl(229, 25%, 31%);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    
+    
+    .score-container{
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    main::before{
+        background-image: url('./images/bg-triangle.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        position: absolute;
+        top:20%;
+        left:20%;
+        height:60%;
+        width: 60%;
+        z-index: -1;
+    
+    }
+    
+}
