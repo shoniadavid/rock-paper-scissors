@@ -355,7 +355,7 @@ main::before{
         width: 300px;
     }
     
-    btn-rules{
+    .btn-rules{
         display:none;
     }
 }
