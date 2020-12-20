@@ -356,6 +356,6 @@ main::before{
     }
     
     btn-rules{
-        font-size:1rem;
+        display:none;
     }
 }
